@@ -1,0 +1,154 @@
+.nav-wrapper {
+  min-width: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: rgba( 255, 255, 255, 0 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 14px );
+  -webkit-backdrop-filter: blur( 14px );
+
+}
+.nav-wrapper .logo { 
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.logo::after { 
+
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5));
+  left: 0;
+  top: 30px;
+  height: 4px;
+  width: 0;
+  transition: .5s ease;
+}
+
+.logo:hover::after { 
+  width: 100%;
+}
+
+
+.nav-wrapper .logo span { 
+  color: black;
+}
+
+.ul-nav { 
+ padding: 0;
+ margin: 0; 
+ /* border: 2px solid orange; */
+}
+
+
+.ul-nav li { 
+  list-style: none;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+
+li a { 
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+
+li a::after { 
+
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    width: 0;
+    left: 0px;
+    background-color: rgb(255, 253, 253);
+    transition: width .5s ease;
+}
+
+li a:hover::after { 
+  width: 100%;
+
+}
+
+.btn-cta { 
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(to right, rgba(117, 76, 198, 0.8), rgba(6, 87, 200, 0.5));
+  padding: 5px 10px;
+  border-radius: 50px;
+  transition: all .5s ease;
+}
+
+
+.btn-cta:hover { 
+  background: linear-gradient(to right, rgba(78, 27, 180, 0.8), rgba(8, 65, 144, 0.318));
+  ;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.525)
+}
+
+.show { 
+  color: white;
+  font-size: 20px;
+  display: none;
+  margin-left: 50%;
+}
+
+
+
+@media (max-width: 1285px) { 
+
+  .nav-wrapper { 
+    min-width: 100%;
+  }
+
+  .btn-cta { 
+    margin-right: 5%;
+  }
+
+
+}
+
+
+@media (max-width:800px) {
+   
+  .show { 
+    display: block;
+  }
+  
+  .btn-cta { 
+    margin-right: 50%;
+  }
+
+  .ul-nav, .btn-cta { 
+    display: none;
+  }
+
+}
+
+
+
+@media (max-width: 550px)  {
+  
+  .show { 
+    
+    margin-left: 50%;
+  }
+
+  
+
+}
